@@ -27,21 +27,97 @@ public class FormPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnEjer1 = new javax.swing.JButton();
+        btnEjer2 = new javax.swing.JButton();
+        btnEjer3 = new javax.swing.JButton();
+        btnEjer4 = new javax.swing.JButton();
+        btnEjer5 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnEjer1.setText("Ejercicio 1");
+
+        btnEjer2.setText("Ejercicio 2");
+        btnEjer2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEjer2ActionPerformed(evt);
+            }
+        });
+
+        btnEjer3.setText("Ejercicio 3");
+        btnEjer3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEjer3ActionPerformed(evt);
+            }
+        });
+
+        btnEjer4.setText("Ejercicio 4");
+        btnEjer4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEjer4ActionPerformed(evt);
+            }
+        });
+
+        btnEjer5.setText("Ejercicio 5");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 470, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnEjer3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnEjer4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnEjer1)
+                                .addGap(94, 94, 94)
+                                .addComponent(btnEjer2))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addComponent(btnEjer5)))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 404, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEjer1)
+                    .addComponent(btnEjer2))
+                .addGap(67, 67, 67)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEjer3)
+                    .addComponent(btnEjer4))
+                .addGap(45, 45, 45)
+                .addComponent(btnEjer5)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEjer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEjer3ActionPerformed
+        // TODO add your handling code here:
+        Pin pin = new Pin();
+        pin.setVisible(true);
+    }//GEN-LAST:event_btnEjer3ActionPerformed
+
+    private void btnEjer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEjer4ActionPerformed
+        // TODO add your handling code here:
+        calculadora calcu = new calculadora();
+        calcu.setVisible(true);
+    }//GEN-LAST:event_btnEjer4ActionPerformed
+
+    private void btnEjer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEjer2ActionPerformed
+        // TODO add your handling code here:
+        Figuras figu = new Figuras();
+        figu.setVisible(true);
+    }//GEN-LAST:event_btnEjer2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -80,5 +156,10 @@ public class FormPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEjer1;
+    private javax.swing.JButton btnEjer2;
+    private javax.swing.JButton btnEjer3;
+    private javax.swing.JButton btnEjer4;
+    private javax.swing.JButton btnEjer5;
     // End of variables declaration//GEN-END:variables
 }
