@@ -5,18 +5,22 @@
  */
 package com.sv.udb.forms;
 
-import java.awt.event.ActionEvent;
+import com.sv.udb.clases.Ejer2;
 
 /**
  *
  * @author luisedu
  */
-public class FormPrincipal extends javax.swing.JFrame {
+public class Figuras extends javax.swing.JFrame {
+
+    private static int conta = 1;
+    private static int conta3 = 1;
+    Ejer2 figu = new Ejer2();
 
     /**
-     * Creates new form FormPrincipall
+     * Creates new form Figuras
      */
-    public FormPrincipal() {
+    public Figuras() {
         initComponents();
     }
 
@@ -32,74 +36,62 @@ public class FormPrincipal extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Ejercicio 1");
+        jButton1.setText("Figura 1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Ejercicio 2");
+        jButton2.setText("Figura 2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Ejercicio 3");
+        jButton3.setText("Figura 3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Ejercicio 4");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        jButton5.setText("Ejercicio 5");
+        jLabel1.setText("Los resultados se escriben en la consola.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton3)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(102, 102, 102))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addComponent(jButton5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jLabel1)))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addGap(33, 33, 33)
-                .addComponent(jButton5)
-                .addContainerGap(58, Short.MAX_VALUE))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addGap(55, 55, 55)
+                .addComponent(jLabel1)
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         pack();
@@ -107,27 +99,72 @@ public class FormPrincipal extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Ejercicio1 ejer1 = new Ejercicio1();
-        ejer1.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        Figuras figu = new Figuras();
-        figu.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        for (int i = conta; i < 9; i++) {
+            if (conta % 2 == 0) {
+
+                figu.generar2();
+                conta = conta + 1;
+
+            } else {
+                figu.generar1();
+                conta = conta + 1;
+            }
+        }
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        Pin pin = new Pin();
-        pin.setVisible(true);
+        
+        for (int i = conta3; i < 9; i++) {
+            if (conta % 2 == 0) {
+
+                figu.generar3();
+                conta = conta + 1;
+
+            } else {
+                figu.generar4();
+                conta = conta + 1;
+            }
+        }
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Calculadora calcu = new Calculadora();
-        calcu.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+//        int central = 1;
+//        int espacios = 10;
+//        for (int fila = 1; fila == 10; fila++) {
+//            for (int i = 1; i == espacios; i++) {
+//                System.out.println(" ");
+//            }
+//            for (int i = fila; i == central; i++) {
+//                
+//                //System.out.println("%d", i % 10);
+//                System.out.print( i % 10);
+//            }
+//            for (int i = central-1; i == fila; i--) {
+//                System.out.println(i % 10);
+//            }
+//            System.out.println("\n");
+//            central=central+2;
+//            espacios=espacios-1;
+//        }
+    int limite=0;
+    String[] arg = null;
+        limite=Integer.parseInt(arg[0]);
+        for(int i=1; i<=limite;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(i);
+            }
+            System.out.println("");
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,21 +183,20 @@ public class FormPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FormPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Figuras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FormPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Figuras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FormPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Figuras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Figuras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FormPrincipal().setVisible(true);
+                new Figuras().setVisible(true);
             }
         });
     }
@@ -169,7 +205,6 @@ public class FormPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
